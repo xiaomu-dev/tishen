@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>提神</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+		function getImage() {
+			$.get("https://lolisuki.cn/api/setu/v1", function(data) {
+				$("#image").attr("src", data.data[0].urls.original);
+			});
+		}
+	</script>
+</head>
+<body>
+	<button onclick="getImage()">提神</button>
+	<br>
+	<img id="image" src="" alt="">
+</body>
+</html>
